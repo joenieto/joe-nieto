@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joe Nieto</title>
+  <meta name="description" content="Joe Nieto, Senior Director at TQA.AI. Healthcare AI tools built with Grok, including ideation sessions, voice check-ins, and a pitch coach.">
+  <style>
+    :root {
+      --paper: #f3eee6;
+      --paper-2: #faf7f2;
+      --ink: #1c1915;
+      --slate: #3f3832;
+      --muted: #5e564c;
+      --line: #d9cfc2;
+      --teal: #0e4f4a;
+      --teal-deep: #083632;
+      --gold: #8a4b24;
+      --card: #fffcf8;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 100% -10%, #efe4d4 0%, transparent 55%),
+        var(--paper);
+      font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.55;
+    }
+    a { color: var(--teal); text-underline-offset: 0.18em; }
+    a:hover { color: var(--teal-deep); }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
+    .wrap { width: min(1080px, calc(100% - 2.5rem)); margin: 0 auto; }
+    header.top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 0 0;
+      gap: 1rem;
+    }
+    .mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 650;
+      letter-spacing: 0.01em;
+    }
+    .mark span.badge {
+      width: 2.1rem;
+      height: 2.1rem;
+      display: grid;
+      place-items: center;
+      background: var(--teal);
+      color: #f7f1e8;
+      border-radius: 0.35rem;
+      font-family: "Iowan Old Style", Palatino, Georgia, serif;
+      font-weight: 600;
+    }
+    .top nav a {
+      color: var(--slate);
+      font-size: 0.95rem;
+    }
+    .hero { padding: 4.2rem 0 2.2rem; }
+    .kicker {
+      margin: 0 0 0.8rem;
+      color: var(--gold);
+      font-size: 0.82rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 650;
+    }
+    h1 {
+      margin: 0;
+      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-weight: 560;
+      font-size: clamp(3.2rem, 8vw, 5.6rem);
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+    }
+    .lede {
+      max-width: 38rem;
+      margin: 1.25rem 0 0;
+      font-size: 1.2rem;
+      color: var(--slate);
+    }
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.2rem;
+      margin: 1.4rem 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+    section { padding: 1.2rem 0 4rem; }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 1rem;
+      border-top: 1px solid var(--line);
+      padding-top: 1.4rem;
+      margin-bottom: 1.2rem;
+    }
+    h2 {
+      margin: 0;
+      font-family: "Iowan Old Style", Palatino, Georgia, serif;
+      font-size: 2rem;
+      font-weight: 560;
+    }
+    .section-head p { margin: 0; max-width: 28rem; color: var(--muted); font-size: 0.95rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media (min-width: 800px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+    article {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      padding: 1.25rem 1.3rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+    article h3 {
+      margin: 0;
+      font-size: 1.28rem;
+      letter-spacing: -0.02em;
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+    .live {
+      flex: none;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--teal);
+      background: #e7f2f0;
+      border-radius: 999px;
+      padding: 0.2rem 0.55rem;
+    }
+    article p { margin: 0.75rem 0 1rem; color: var(--slate); }
+    .links {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .links a {
+      text-decoration: none;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.9rem;
+      color: var(--teal-deep);
+      background: var(--paper-2);
+    }
+    .links a:hover { border-color: var(--teal); background: #eef6f5; }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 1.2rem 0 2rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="mark" href="#top"><span class="badge">JN</span> Joe Nieto</a>
+      <nav><a href="#projects">Projects</a></nav>
+    </header>
+    <main id="top">
+      <section class="hero" aria-labelledby="name">
+        <p class="kicker">Senior Director, TQA.AI · Galveston, Texas</p>
+        <h1 id="name">Joe Nieto</h1>
+        <p class="lede">Helping hospitals and partners put AI to work. These are the tools built with Grok.</p>
+        <ul class="contacts">
+          <li><a href="mailto:joe.nieto@tqa.ai">joe.nieto@tqa.ai</a></li>
+          <li><a href="mailto:joe.nieto@gmail.com">joe.nieto@gmail.com</a></li>
+        </ul>
+      </section>
+      <section id="projects" aria-labelledby="projects-title">
+        <div class="section-head">
+          <h2 id="projects-title">Projects</h2>
+          <p>Live apps on Vercel. GitHub repos are private, so those links open only if you already have access.</p>
+        </div>
+        <div class="grid">
+          <article>
+            <div class="card-top">
+              <h3>Ideation Dashboard</h3>
+              <span class="live">Live</span>
+            </div>
+            <p>A mobile web app for onsite healthcare AI ideation sessions. People submit ideas from their phones. The facilitator uses a room view to sort, time, vote, and export. The healthcare demo room is CLINIC.</p>
+            <div class="links">
+              <a target="_blank" rel="noopener noreferrer" href="https://ideation-dashboard-nine.vercel.app">Open the app</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/joenieto/ideation-dashboard">GitHub (private)</a>
+            </div>
+          </article>
+          <article>
+            <div class="card-top">
+              <h3>Vela</h3>
+              <span class="live">Live</span>
+            </div>
+            <p>An English and Spanish AI voice wellness check-in for older adults who live at home. The public page explains the service. The coordinator demo uses fictional people, not medical records.</p>
+            <div class="links">
+              <a target="_blank" rel="noopener noreferrer" href="https://vela-gamma-seven.vercel.app">Open the app</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/joenieto/vela">GitHub (private)</a>
+            </div>
+          </article>
+          <article>
+            <div class="card-top">
+              <h3>Am I bombing?</h3>
+              <span class="live">Live</span>
+            </div>
+            <p>An in-browser pitch coach. The camera and microphone stay on your device. The page turns what it sees and hears into a few numbers, then returns coaching, including simulated nervous and confident pitches.</p>
+            <div class="links">
+              <a target="_blank" rel="noopener noreferrer" href="https://am-i-bombing.vercel.app">Open the app</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/joenieto/am-i-bombing">GitHub (private)</a>
+            </div>
+          </article>
+          <article>
+            <div class="card-top">
+              <h3>Post-Discharge Voice</h3>
+              <span class="live">Live</span>
+            </div>
+            <p>A concept demo of outbound AI voice check-ins after a hospital stay, in English or Spanish. The console lists fictional patients only. It is not a clinical system and does not connect to a medical record.</p>
+            <div class="links">
+              <a target="_blank" rel="noopener noreferrer" href="https://post-discharge-voice.vercel.app">Open the app</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/joenieto/post-discharge-voice">GitHub (private)</a>
+            </div>
+          </article>
+          <article>
+            <div class="card-top">
+              <h3>Post-Discharge Check-In</h3>
+              <span class="live">Live</span>
+            </div>
+            <p>A one-minute video wellness check-in after a hospital stay. It asks how the stay went, waits through pauses, and notices a pill bottle held up to the camera. It says up front that it is an AI, not a nurse or a doctor.</p>
+            <div class="links">
+              <a target="_blank" rel="noopener noreferrer" href="https://tavus.daily.co/cea0c9dc0be2e49a">Open the check-in</a>
+            </div>
+          </article>
+          <article>
+            <div class="card-top">
+              <h3>Home Care Specialist</h3>
+              <span class="live">Live</span>
+            </div>
+            <p>A prototype of the first face-to-face model built on the Griffin platform, using Tavus, configured as a home care specialist.</p>
+            <div class="links">
+              <a target="_blank" rel="noopener noreferrer" href="https://maker.tavus.io/deployments/41bf6d51-7890-4fd2-8ee5-dec4bce346d4">Open demo</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>© 2026 Joe Nieto</span>
+      <span>Galveston, Texas</span>
+    </footer>
+  </div>
+</body>
+</html>
