@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Joe Nieto</title>
-  <meta name="description" content="Joe Nieto, Senior Director at TQA.AI. Healthcare AI tools built with Grok, including ideation sessions, voice check-ins, and a pitch coach.">
+  <meta name="description" content="Joe Nieto, Senior Director at TQA.AI. Healthcare AI tools built with Grok, including ideation sessions, voice check-ins, referral fax OCR, and a pitch coach.">
   <meta name="theme-color" content="#f3eee6">
   <style>
     :root {
@@ -253,7 +253,6 @@
       }
       .portrait-stage { height: auto; min-height: 26rem; }
       .identity { padding: 1.15rem 1.15rem 1.15rem 0.35rem; }
-      .tile-jolly { grid-column: 1 / -1; }
     }
     @media (min-width: 980px) {
       .bento {
@@ -283,10 +282,11 @@
       .tile-ideation { grid-column: 9 / span 4; grid-row: 2; }
       .tile-vela { grid-column: 1 / span 5; grid-row: 3; }
       .tile-bombing { grid-column: 6 / span 7; grid-row: 3; }
-      .tile-voice { grid-column: 1 / span 7; grid-row: 4; }
-      .tile-checkin { grid-column: 8 / span 5; grid-row: 4; }
-      .tile-homecare { grid-column: 1 / span 5; grid-row: 5; }
-      .tile-jolly { grid-column: 6 / span 7; grid-row: 5; }
+      .tile-voice { grid-column: 1 / span 5; grid-row: 4; }
+      .tile-referral { grid-column: 6 / span 7; grid-row: 4; }
+      .tile-checkin { grid-column: 1 / span 4; grid-row: 5; }
+      .tile-homecare { grid-column: 5 / span 4; grid-row: 5; }
+      .tile-jolly { grid-column: 9 / span 4; grid-row: 5; }
       .portrait-stage { min-height: 100%; }
     }
     @media (max-width: 699px) {
@@ -367,6 +367,17 @@
           <div class="links">
             <a target="_blank" rel="noopener noreferrer" href="https://post-discharge-voice.vercel.app">Open the app</a>
             <a target="_blank" rel="noopener noreferrer" href="https://github.com/joenieto/post-discharge-voice">GitHub (private)</a>
+          </div>
+        </article>
+        <article class="tile tile-referral">
+          <div class="card-top">
+            <h3>Referral Fax Reader</h3>
+            <span class="live">Live</span>
+          </div>
+          <p>Upload a one-page specialty referral fax (PDF, PNG, or JPG), or try the bundled sample. The app reads the page with Datalab and shows the patient name, date of birth, referring clinician, specialty, reason, and destination clinic in plain language. Demo data only: the sample person is labeled DEMO PATIENT — NOT REAL, and this is not a clinical system with real patient information.</p>
+          <div class="links">
+            <a target="_blank" rel="noopener noreferrer" href="https://referral-fax-ocr.vercel.app">Open the app</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://cursor.com/codebase/joe-nieto/referral-fax-ocr">Source (private)</a>
           </div>
         </article>
         <article class="tile tile-checkin">
