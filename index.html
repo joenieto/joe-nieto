@@ -177,6 +177,19 @@
       background: var(--paper-2);
     }
     .links a:hover { border-color: var(--teal); background: #eef6f5; }
+    .tile-demo p { margin: 0.75rem 0 1rem; color: var(--slate); }
+    .tile-demo .links a {
+      background: var(--teal);
+      color: #f7f1e8;
+      border-color: var(--teal);
+      padding: 0.5rem 1rem;
+      font-weight: 650;
+    }
+    .tile-demo .links a:hover {
+      background: var(--teal-deep);
+      border-color: var(--teal-deep);
+      color: #f7f1e8;
+    }
     .hero {
       position: relative;
       display: grid;
@@ -266,6 +279,17 @@
       .tile-knee { grid-column: 1 / -1; grid-row: 6; }
       .tile-homecare { grid-column: 1; grid-row: 7; }
       .tile-jolly { grid-column: 2; grid-row: 7; }
+      .tile-demo {
+        grid-column: 1 / -1;
+        grid-row: 8;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.25rem;
+      }
+      .tile-demo .demo-copy { flex: 1 1 16rem; }
+      .tile-demo p { margin: 0.35rem 0 0; }
+      .tile-demo .links { margin-top: 0; flex: none; }
     }
     @media (min-width: 980px) {
       .bento {
@@ -299,8 +323,9 @@
       .tile-referral { grid-column: 6 / span 7; grid-row: 4; }
       .tile-checkin { grid-column: 1 / span 5; grid-row: 5; }
       .tile-knee { grid-column: 6 / span 7; grid-row: 5; }
-      .tile-homecare { grid-column: 1 / span 6; grid-row: 6; }
-      .tile-jolly { grid-column: 7 / span 6; grid-row: 6; }
+      .tile-homecare { grid-column: 1 / span 4; grid-row: 6; }
+      .tile-jolly { grid-column: 5 / span 4; grid-row: 6; }
+      .tile-demo { grid-column: 9 / span 4; grid-row: 6; }
       .portrait-stage { min-height: 100%; }
     }
     @media (max-width: 699px) {
@@ -433,6 +458,15 @@
           <p>A walk-up virtual teller for Nieto Bank and Trust. She welcomes you, asks what you need, and checks that a photo ID is held up rather than something else.</p>
           <div class="links">
             <a target="_blank" rel="noopener noreferrer" href="https://maker.tavus.io/deployments/e384fbd2-7eba-4064-96fb-5549fadb4d3a">Open demo</a>
+          </div>
+        </article>
+        <article class="tile tile-demo">
+          <div class="demo-copy">
+            <h3>Request a demo</h3>
+            <p>Want to see one of these tools in action? Send a note and we will set up a time.</p>
+          </div>
+          <div class="links">
+            <a href="mailto:gretchen@mail.grokbot.com?subject=Demo%20request">Send a note</a>
           </div>
         </article>
       </div>
