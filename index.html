@@ -143,7 +143,8 @@
       font-size: 1.28rem;
       letter-spacing: -0.02em;
     }
-    .tile-jolly h3 {
+    .tile-jolly h3,
+    .tile-revenue h3 {
       text-wrap: balance;
     }
     .card-top {
@@ -279,7 +280,8 @@
       .tile-voice { grid-column: 2; grid-row: 4; }
       .tile-referral { grid-column: 1; grid-row: 5; }
       .tile-checkin { grid-column: 2; grid-row: 5; }
-      .tile-knee { grid-column: 1 / -1; grid-row: 6; }
+      .tile-knee { grid-column: 1; grid-row: 6; }
+      .tile-revenue { grid-column: 2; grid-row: 6; }
       .tile-homecare { grid-column: 1; grid-row: 7; }
       .tile-jolly { grid-column: 2; grid-row: 7; }
       .tile-demo {
@@ -326,9 +328,10 @@
       .tile-referral { grid-column: 6 / span 7; grid-row: 4; }
       .tile-checkin { grid-column: 1 / span 5; grid-row: 5; }
       .tile-knee { grid-column: 6 / span 7; grid-row: 5; }
-      .tile-homecare { grid-column: 1 / span 4; grid-row: 6; }
-      .tile-jolly { grid-column: 5 / span 4; grid-row: 6; }
-      .tile-demo { grid-column: 9 / span 4; grid-row: 6; }
+      .tile-homecare { grid-column: 1 / span 5; grid-row: 6; }
+      .tile-jolly { grid-column: 6 / span 7; grid-row: 6; }
+      .tile-revenue { grid-column: 1 / span 8; grid-row: 7; }
+      .tile-demo { grid-column: 9 / span 4; grid-row: 7; }
       .portrait-stage { min-height: 100%; }
     }
     @media (max-width: 699px) {
@@ -461,6 +464,16 @@
           <p>A walk-up virtual teller for Nieto Bank and Trust. She welcomes you, asks what you need, and checks that a photo ID is held up rather than something else.</p>
           <div class="links">
             <a target="_blank" rel="noopener noreferrer" href="https://maker.tavus.io/deployments/e384fbd2-7eba-4064-96fb-5549fadb4d3a">Open demo</a>
+          </div>
+        </article>
+        <article class="tile tile-revenue">
+          <div class="card-top">
+            <h3>Ask Your Revenue Cycle Data</h3>
+            <span class="live">Live</span>
+          </div>
+          <p>Billing leaders ask plain-English questions about synthetic claims data. The agent writes a read-only query and shows the SQL and rows behind every answer, with a 20-question test set that scores its accuracy.</p>
+          <div class="links">
+            <a target="_blank" rel="noopener" href="https://ask-your-revenue-cycle-data.vercel.app">Open the app</a>
           </div>
         </article>
         <article class="tile tile-demo">
