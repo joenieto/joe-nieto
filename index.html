@@ -66,6 +66,12 @@
       font-family: "Iowan Old Style", Palatino, Georgia, serif;
       font-weight: 600;
     }
+    .top nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 0.35rem 0.95rem;
+    }
     .top nav a {
       color: var(--slate);
       font-size: 0.95rem;
@@ -342,6 +348,209 @@
       .section-head { flex-direction: column; align-items: start; }
       .wrap { width: min(1140px, calc(100% - 1.5rem)); }
     }
+    .built {
+      border-top: 1px solid var(--line);
+      margin-top: 0.4rem;
+      padding: 1.35rem 0 0.4rem;
+    }
+    .built-intro {
+      margin: 0.75rem 0 0;
+      max-width: 42rem;
+      color: var(--slate);
+    }
+    .flow {
+      list-style: none;
+      margin: 1.15rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: 1.35rem;
+    }
+    .flow li {
+      position: relative;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 1.15rem;
+      padding: 0.9rem 0.95rem 0.85rem;
+      box-shadow: 0 1px 0 rgba(255, 252, 248, 0.8) inset, 0 10px 28px rgba(28, 25, 21, 0.05);
+    }
+    .flow li:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      left: 1.45rem;
+      bottom: -0.95rem;
+      width: 0.42rem;
+      height: 0.42rem;
+      border-right: 2px solid var(--teal);
+      border-bottom: 2px solid var(--teal);
+      transform: rotate(45deg);
+    }
+    .step-no {
+      display: inline-grid;
+      place-items: center;
+      width: 1.65rem;
+      height: 1.65rem;
+      margin-bottom: 0.45rem;
+      border-radius: 999px;
+      background: var(--teal);
+      color: #f7f1e8;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    .flow h3 {
+      margin: 0;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+    }
+    .flow p {
+      margin: 0.4rem 0 0;
+      color: var(--slate);
+      font-size: 0.92rem;
+      text-wrap: pretty;
+    }
+    .apps {
+      margin: 1.2rem 0 0.35rem;
+    }
+    .apps h3 {
+      margin: 0 0 0.35rem;
+      font-family: "Iowan Old Style", Palatino, Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 560;
+    }
+    .apps-note {
+      margin: 0 0 0.85rem;
+      max-width: 40rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .stack-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .stack-table caption {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .stack-table th {
+      text-align: left;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      padding: 0.45rem 0.65rem 0.55rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .stack-table td {
+      padding: 0.72rem 0.65rem;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      color: var(--slate);
+      font-size: 0.92rem;
+    }
+    .stack-table td:first-child {
+      color: var(--ink);
+      font-weight: 650;
+    }
+    .stack-table .lbl {
+      display: none;
+    }
+    .fine {
+      margin: 0.85rem 0 0;
+      max-width: 46rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+    @media (max-width: 759px) {
+      .stack-table thead {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      .stack-table,
+      .stack-table tbody,
+      .stack-table tr,
+      .stack-table td {
+        display: block;
+        width: auto;
+      }
+      .stack-table tr {
+        margin: 0 0 0.7rem;
+        padding: 0.8rem 0.95rem 0.45rem;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 1.15rem;
+        box-shadow: 0 1px 0 rgba(255, 252, 248, 0.8) inset, 0 10px 28px rgba(28, 25, 21, 0.05);
+      }
+      .stack-table td {
+        border: 0;
+        padding: 0.12rem 0 0.45rem;
+      }
+      .stack-table td:first-child {
+        font-size: 1.05rem;
+        padding-bottom: 0.4rem;
+      }
+      .stack-table .lbl {
+        display: block;
+        margin-bottom: 0.05rem;
+        color: var(--gold);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+    }
+    @media (min-width: 760px) {
+      .flow { grid-template-columns: 1fr 1fr 1fr; gap: 0.7rem 0.85rem; }
+      .flow li:not(:last-child)::after { display: none; }
+      .flow li:not(:nth-child(3n))::after {
+        display: block;
+        left: auto;
+        bottom: auto;
+        right: -0.58rem;
+        top: 1.35rem;
+        border-bottom: 0;
+        border-top: 2px solid var(--teal);
+        transform: rotate(45deg);
+      }
+      .apps-sheet {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 1.35rem;
+        padding: 0.85rem 0.7rem 0.35rem;
+        box-shadow: 0 1px 0 rgba(255, 252, 248, 0.8) inset, 0 10px 28px rgba(28, 25, 21, 0.05);
+        overflow-x: auto;
+      }
+    }
+    @media (min-width: 1100px) {
+      .flow { grid-template-columns: repeat(6, 1fr); gap: 0.85rem; }
+      .flow li:not(:nth-child(3n))::after { display: none; }
+      .flow li:not(:last-child)::after {
+        display: block;
+        left: auto;
+        bottom: auto;
+        right: -0.62rem;
+        z-index: 1;
+        top: 1.35rem;
+        border-bottom: 0;
+        border-right: 2px solid var(--teal);
+        border-top: 2px solid var(--teal);
+        transform: rotate(45deg);
+      }
+    }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
     }
@@ -351,7 +560,10 @@
   <div class="wrap">
     <header class="top">
       <a class="mark" href="#top"><span class="badge">JN</span> Joe Nieto</a>
-      <nav><a href="#projects">Projects</a></nav>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#built">How they're built</a>
+      </nav>
     </header>
     <main id="top">
       <div class="bento">
@@ -513,6 +725,148 @@
           </div>
         </article>
       </div>
+      <section class="built" id="built" aria-labelledby="built-title">
+        <p class="kicker">Architecture</p>
+        <h2 id="built-title">How these apps are built and run</h2>
+        <p class="built-intro">Joe describes an app in plain language, an assistant writes the code, and Joe reviews the change before it goes on the web. When someone opens it, the app already knows where its data lives and which model, if any, it should call.</p>
+        <ol class="flow">
+          <li>
+            <span class="step-no" aria-hidden="true">1</span>
+            <h3>Joe describes it</h3>
+            <p>He says what he wants in plain language to Grok, Grok Bot, or Claude in Cursor's cloud coding agents. The assistant writes the code.</p>
+          </li>
+          <li>
+            <span class="step-no" aria-hidden="true">2</span>
+            <h3>He reviews the change</h3>
+            <p>GitHub or Cursor Origin keeps the code. The change arrives as a pull request. Joe reviews it and merges it.</p>
+          </li>
+          <li>
+            <span class="step-no" aria-hidden="true">3</span>
+            <h3>Vercel publishes it</h3>
+            <p>Vercel builds the app and serves it at an address ending in vercel.app. Three video demos open on Tavus.</p>
+          </li>
+          <li>
+            <span class="step-no" aria-hidden="true">4</span>
+            <h3>Data has a home</h3>
+            <p>Turso (libSQL) stores Ideation Dashboard sessions and Post-Discharge Voice calls. Other apps keep data in the browser, on the device, or in a sample file shipped with the app.</p>
+          </li>
+          <li>
+            <span class="step-no" aria-hidden="true">5</span>
+            <h3>A model may answer</h3>
+            <p>Google Gemini reads knee X-rays. Sakana Fugu researches an NPS score. The list below names the voice service, document reader, or on-device work for every app.</p>
+          </li>
+          <li>
+            <span class="step-no" aria-hidden="true">6</span>
+            <h3>Someone opens it</h3>
+            <p>A person uses the app in a browser, on a phone or a computer.</p>
+          </li>
+        </ol>
+        <div class="apps">
+          <h3>Each app</h3>
+          <p class="apps-note">A short map of the same path, one row per app.</p>
+          <div class="apps-sheet">
+            <table class="stack-table">
+              <caption>Where each app's code, data, and runtime model live</caption>
+              <thead>
+                <tr>
+                  <th scope="col">App</th>
+                  <th scope="col">Code</th>
+                  <th scope="col">Runs on</th>
+                  <th scope="col">Where data sits</th>
+                  <th scope="col">What answers</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ideation Dashboard</td>
+                  <td><span class="lbl">Code</span>GitHub</td>
+                  <td><span class="lbl">Runs on</span>Vercel</td>
+                  <td><span class="lbl">Where data sits</span>Turso database for the session: ideas, votes, and participants.</td>
+                  <td><span class="lbl">What answers</span>Vercel AI Gateway. The model is not named.</td>
+                </tr>
+                <tr>
+                  <td>Vela</td>
+                  <td><span class="lbl">Code</span>GitHub</td>
+                  <td><span class="lbl">Runs on</span>Vercel</td>
+                  <td><span class="lbl">Where data sits</span>This browser. Profiles and status changes stay on the device.</td>
+                  <td><span class="lbl">What answers</span>Bland places the phone call. Jev scores it.</td>
+                </tr>
+                <tr>
+                  <td>Am I bombing?</td>
+                  <td><span class="lbl">Code</span>GitHub</td>
+                  <td><span class="lbl">Runs on</span>Vercel</td>
+                  <td><span class="lbl">Where data sits</span>This device. The camera and microphone are read here, and nothing is recorded.</td>
+                  <td><span class="lbl">What answers</span>Jev, a TypeSafe decision model. Backup rules run on the device if Jev does not answer.</td>
+                </tr>
+                <tr>
+                  <td>Post-Discharge Voice</td>
+                  <td><span class="lbl">Code</span>GitHub</td>
+                  <td><span class="lbl">Runs on</span>Vercel</td>
+                  <td><span class="lbl">Where data sits</span>Turso database of call records. The patients on screen are synthetic.</td>
+                  <td><span class="lbl">What answers</span>Bland places the call. The screen calls the service TQA Voice.</td>
+                </tr>
+                <tr>
+                  <td>Referral Fax Reader</td>
+                  <td><span class="lbl">Code</span>Cursor Origin</td>
+                  <td><span class="lbl">Runs on</span>Vercel</td>
+                  <td><span class="lbl">Where data sits</span>The fax is read on screen for that visit.</td>
+                  <td><span class="lbl">What answers</span>Datalab reads the page, including handwriting.</td>
+                </tr>
+                <tr>
+                  <td>Knee X-ray Assist</td>
+                  <td><span class="lbl">Code</span>Cursor Origin</td>
+                  <td><span class="lbl">Runs on</span>Vercel</td>
+                  <td><span class="lbl">Where data sits</span>Uploads stay in this browser session. Sample cases ship with the app.</td>
+                  <td><span class="lbl">What answers</span>Google Gemini reads the images. PubMed supplies recent papers.</td>
+                </tr>
+                <tr>
+                  <td>Post-Discharge Check-In</td>
+                  <td><span class="lbl">Code</span>No repository is linked on this page.</td>
+                  <td><span class="lbl">Runs on</span>Tavus</td>
+                  <td><span class="lbl">Where data sits</span>The page does not show a database.</td>
+                  <td><span class="lbl">What answers</span>A Tavus video check-in.</td>
+                </tr>
+                <tr>
+                  <td>Home Care Specialist</td>
+                  <td><span class="lbl">Code</span>No repository is linked on this page.</td>
+                  <td><span class="lbl">Runs on</span>Tavus</td>
+                  <td><span class="lbl">Where data sits</span>The page does not show a database.</td>
+                  <td><span class="lbl">What answers</span>Tavus. The project card describes it as built on the Griffin platform.</td>
+                </tr>
+                <tr>
+                  <td>Virtual Avatar Bank Teller</td>
+                  <td><span class="lbl">Code</span>No repository is linked on this page.</td>
+                  <td><span class="lbl">Runs on</span>Tavus</td>
+                  <td><span class="lbl">Where data sits</span>The page does not show a database.</td>
+                  <td><span class="lbl">What answers</span>A Tavus video teller.</td>
+                </tr>
+                <tr>
+                  <td>Denial Desk</td>
+                  <td><span class="lbl">Code</span>GitHub</td>
+                  <td><span class="lbl">Runs on</span>Vercel</td>
+                  <td><span class="lbl">Where data sits</span>A synthetic claims book ships with the app. Letter progress can stay in this browser.</td>
+                  <td><span class="lbl">What answers</span>UiPath writes the letter and audit drafts. The model that writes a query is not named.</td>
+                </tr>
+                <tr>
+                  <td>NPS Research</td>
+                  <td><span class="lbl">Code</span>Cursor Origin</td>
+                  <td><span class="lbl">Runs on</span>Vercel</td>
+                  <td><span class="lbl">Where data sits</span>Sample cases ship with the app.</td>
+                  <td><span class="lbl">What answers</span>Sakana Fugu. Fugu Ultra is also offered. GPT-4o, Claude Sonnet, Gemini, and Grok are listed and marked not configured.</td>
+                </tr>
+                <tr>
+                  <td>Limber Stretch</td>
+                  <td><span class="lbl">Code</span>GitHub</td>
+                  <td><span class="lbl">Runs on</span>Vercel</td>
+                  <td><span class="lbl">Where data sits</span>The streak and settings stay in this browser.</td>
+                  <td><span class="lbl">What answers</span>No live model. Meditation music is generated on the device.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="fine">Ideation Dashboard sends work through Vercel AI Gateway, and the app does not name the model behind it. Denial Desk does not name the model that writes a query. The other names on the NPS Research screen are visible, and each one is marked not configured.</p>
+        </div>
+      </section>
     </main>
     <footer>
       <span>© 2026 Joe Nieto</span>
