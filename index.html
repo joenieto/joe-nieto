@@ -194,6 +194,12 @@
       border-color: var(--teal-deep);
       color: #f7f1e8;
     }
+    .tile-built { position: relative; }
+    .tile-built .links a::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
     .hero {
       position: relative;
       display: grid;
@@ -297,6 +303,16 @@
       .tile-demo .demo-copy { flex: 1 1 16rem; }
       .tile-demo p { margin: 0.35rem 0 0; }
       .tile-demo .links { margin-top: 0; flex: none; }
+      .tile-built {
+        grid-column: 1 / -1;
+        grid-row: 11;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.35rem 1.5rem;
+      }
+      .tile.tile-built > p { margin: 0; flex: 1 1 16rem; }
+      .tile-built .links { margin-top: 0; margin-left: auto; }
     }
     @media (min-width: 980px) {
       .bento {
@@ -336,6 +352,16 @@
       .tile-nps { grid-column: 1 / span 12; grid-row: 7; }
       .tile-limber { grid-column: 1 / span 8; grid-row: 8; }
       .tile-demo { grid-column: 9 / span 4; grid-row: 8; }
+      .tile-built {
+        grid-column: 1 / span 12;
+        grid-row: 9;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.35rem 1.5rem;
+      }
+      .tile.tile-built > p { margin: 0; flex: 1 1 18rem; }
+      .tile-built .links { margin-top: 0; margin-left: auto; }
       .portrait-stage { min-height: 100%; }
     }
     @media (max-width: 699px) {
@@ -510,6 +536,15 @@
           </div>
           <div class="links">
             <a href="mailto:gretchen@mail.grokbot.com?subject=Demo%20request">Send a note</a>
+          </div>
+        </article>
+        <article class="tile tile-built">
+          <div class="card-top">
+            <h3>How these apps are built</h3>
+          </div>
+          <p>From a plain-language description to a person opening the app.</p>
+          <div class="links">
+            <a href="architecture.html">See the path</a>
           </div>
         </article>
       </div>
