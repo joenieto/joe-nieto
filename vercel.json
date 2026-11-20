@@ -1,6 +1,14 @@
 {
-  "rewrites": [
-    { "source": "/holy-grail", "destination": "https://holy-grail-henna.vercel.app/holy-grail" },
-    { "source": "/holy-grail/:path*", "destination": "https://holy-grail-henna.vercel.app/holy-grail/:path*" }
+  "redirects": [
+    {
+      "source": "/holy-grail",
+      "destination": "https://holy-grail-henna.vercel.app",
+      "permanent": false
+    },
+    {
+      "source": "/holy-grail/:path*",
+      "destination": "https://holy-grail-henna.vercel.app/:path*",
+      "permanent": false
+    }
   ]
 }
