@@ -324,7 +324,7 @@
         <li>
           <span class="step-no" aria-hidden="true">4</span>
           <h2>Data has a home</h2>
-          <p>Turso (libSQL) stores Ideation Dashboard sessions and Post-Discharge Voice calls. Other apps keep data in the browser, on the device, or in a sample file shipped with the app.</p>
+          <p>Turso (libSQL) stores Launchpad sessions and Post-Discharge Voice calls. Other apps keep data in the browser, on the device, or in a sample file shipped with the app.</p>
         </li>
         <li>
           <span class="step-no" aria-hidden="true">5</span>
@@ -354,11 +354,18 @@
             </thead>
             <tbody>
               <tr>
-                <td>Ideation Dashboard</td>
+                <td>Launchpad</td>
                 <td><span class="lbl">Code</span>GitHub</td>
                 <td><span class="lbl">Runs on</span>Vercel</td>
                 <td><span class="lbl">Where data sits</span>Turso database for the session: ideas, votes, and participants.</td>
                 <td><span class="lbl">What answers</span>Vercel AI Gateway. The model is not named.</td>
+              </tr>
+              <tr>
+                <td>Holy Grail</td>
+                <td><span class="lbl">Code</span>GitHub</td>
+                <td><span class="lbl">Runs on</span>Vercel</td>
+                <td><span class="lbl">Where data sits</span>This browser. The session stays on the device, and the demo ships with a sample transcript.</td>
+                <td><span class="lbl">What answers</span>Grok, Claude, OpenAI, or Azure. With no key, the demo marks the framework from keywords in the sample.</td>
               </tr>
               <tr>
                 <td>Vela</td>
@@ -468,7 +475,7 @@
             </tbody>
           </table>
         </div>
-        <p class="fine">Ideation Dashboard sends work through Vercel AI Gateway, and the app does not name the model behind it. Denial Desk does not name the model that writes a query. The other names on the NPS Research screen are visible, and each one is marked not configured.</p>
+        <p class="fine">Launchpad sends work through Vercel AI Gateway, and the app does not name the model behind it. Denial Desk does not name the model that writes a query. The other names on the NPS Research screen are visible, and each one is marked not configured.</p>
       </div>
       <p class="back"><a href="index.html">Back to projects</a></p>
     </main>
